@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="sk">
+    <head>
+        <title>Zadanie 5</title>
+        <meta charset="utf-8">
+        <meta name='viewport' content='width=device-width'>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCANu2y5eMLAS-ERC6bbosXXikd4eldkEc&callback=initMap&libraries=places"
+          defer>
+        </script>
+
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./script/script.js"></script>
+    </head>
+    
+    <body>
+      
+      <section >    
+      <h2>Zadanie 5</h2>  
+      <div id="map"  class="map1"></div>
+      <div id="pano" class="map2"></div> <br>
+
+      
+        <div class="wid" style="border: 2px solid black;">
+          <label for="pac-input" class="customLabel mt">Odkiaľ ideme na fakultu:</label>
+          <input id="pac-input" type="text" placeholder="Sem napíš niečo pls" class="mb mt" onclick="loadInput()">
+          <br>
+          <div class="leftFloat mt">
+            <hr>
+            <input type="radio" id="walk" name="travelMode" value="WALKING">
+            <label for="walk">Peši</label><br> 
+            <input type="radio" id="car" name="travelMode" value="DRIVING" class="mt" checked>
+            <label for="car">Autom</label><br><hr>
+          </div>
+
+          <span id="routeDistance"></span>
+          <button class="mt" id="cesta" onclick="showRouteToFei()">Vypočítaj trasu</button>
+          <button id="busStop" onclick="busStop()">Show zastávky</button>
+        </div>
+      </section>
+      
+    </body>
+</html>
